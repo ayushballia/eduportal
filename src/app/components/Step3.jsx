@@ -19,13 +19,13 @@ const Step3 = () => {
   const router = useRouter();
 
   const handleNext = () => {
-    alert("form submit")
+    alert("form submit");
   };
 
   return (
     <div className="p-[70px] bg-white rounded-[15px]">
       <h2 className="text-[26px] font-bold mb-6">
-        Highlight your <span className="text-[#0A65CC]"> Job Preferences</span> {" "}
+        Highlight your <span className="text-[#0A65CC]"> Job Preferences</span>{" "}
         for the best fit
       </h2>
       <div className="steps mb-4 flex justify-between mb-8 w-[574px]">
@@ -102,9 +102,18 @@ const Step3 = () => {
           />
         </FormSection> */}
 
-        {/* <FormSection title="About me">
-          <textarea name="about" id="about" cols="30" rows="10"></textarea>
-        </FormSection> */}
+        <FormSection title="About me">
+          input
+        </FormSection>
+        <FormSection title="About me">
+          <textarea
+            name="about"
+            id="about"
+            cols="60"
+            rows="4"
+            className="w-full pl-12 pr-4 py-[20px] text-[#9199A3] text-[12px] border border-gray-300 rounded-[15px]"
+          ></textarea>
+        </FormSection>
 
         <CustomSelect
           label={"Skills"}
