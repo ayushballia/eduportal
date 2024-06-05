@@ -29,7 +29,7 @@ const Step3 = () => {
         <span className="text-[#0A65CC]"> Experience</span>
       </h2>
       <div className="steps mb-4 flex justify-between mb-8 w-[574px]">
-        <button type="button" className="font-semibold flex gap-4 ">
+        <button type="button" className="flex gap-4 ">
           <UserIcon className="size-6 " />
           Work Experience
         </button>
@@ -39,7 +39,7 @@ const Step3 = () => {
         </button>
         <button
           type="button"
-          className="step flex gap-4 text-[#0A65CC] border-b border-[#0A65CC]"
+          className="step font-semibold flex gap-4 text-[#0A65CC] border-b border-[#0A65CC]"
         >
           <Bars3BottomLeftIcon className="size-6 " />
           Preference
@@ -111,12 +111,12 @@ const Step3 = () => {
           placeholder={"Select your Employment type"}
         />
 
-        <button
+<button
           type="button"
           onClick={handleNext}
-          className="mt-4 bg-blue-500 text-white px-4 py-2"
+          className="mt-4 text-[16px] font-bold bg-[#0A65CC] text-white px-[23px] py-[16px] rounded-[20px]"
         >
-          Next
+          Submit
         </button>
       </form>
     </div>

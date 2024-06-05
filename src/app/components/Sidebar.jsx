@@ -37,7 +37,7 @@ const Sidebar = () => {
         <li className="flex items-center">
           <FaBriefcase className="mr-2" />
           <Link
-            href="/step2"
+            href="/"
             className={
               router.pathname === "/"
                 ? "text-blue-500 font-bold"
@@ -50,7 +50,7 @@ const Sidebar = () => {
         <li className="flex items-center">
           <FaGraduationCap className="mr-2" />
           <Link
-            href="/step3"
+            href="/step2"
             className={
               router.pathname === "/step2"
                 ? "text-blue-500 font-bold"
@@ -65,7 +65,7 @@ const Sidebar = () => {
           <Link
             href="/step3"
             className={
-              router.pathname === "/step4"
+              router.pathname === "/step3"
                 ? "text-blue-500 font-bold"
                 : "text-gray-700"
             }
