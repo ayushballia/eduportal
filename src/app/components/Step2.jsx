@@ -17,11 +17,11 @@ const Step2 = () => {
   return (
     <div className="p-[70px] bg-white rounded-[15px]">
       <h2 className="text-[26px] font-bold mb-6">
-        Impress the Employer with your{" "}
-        <span className="text-[#0A65CC]"> Experience</span>
+      Stand out with your  {" "}
+        <span className="text-[#0A65CC]"> Academic</span> credentials
       </h2>
       <div className="steps mb-4 flex justify-between mb-8 w-[574px]">
-        <button type="button" className="flex gap-4 ">
+        <button type="button" className="flex text-[#23232380] gap-4 ">
           <UserIcon className="size-6 " />
           Work Experience
         </button>
@@ -32,7 +32,7 @@ const Step2 = () => {
           <AcademicCapIcon className="size-6 " />
           Qualification
         </button>
-        <button type="button" className="step flex gap-4 ">
+        <button type="button" className="step text-[#23232380] flex gap-4 ">
           <Bars3BottomLeftIcon className="size-6 " />
           Preference
         </button>
