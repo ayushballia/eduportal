@@ -11,7 +11,7 @@ import FormSection from "./FormSection";
 import { useState } from "react";
 import OptionButtonsWithIcon from "./OptionButtonsWithIcon";
 
-const Step2 = () => {
+const Step3 = () => {
   const [currentlyEmployed, setCurrentlyEmployed] = useState(null);
   const [workMode, setWorkMode] = useState("on-site");
   const [roleType, setRoleType] = useState(null);
@@ -95,12 +95,12 @@ const Step2 = () => {
           </div>
         </FormSection>
 
-        <FormSection title="Type of Role">
+        {/* <FormSection title="Type of Role">
           <OptionButtonsWithIcon
             options={["Male", "Female", "Prefer not to say"]}
             onSelect={setRoleType}
           />
-        </FormSection>
+        </FormSection> */}
 
         {/* <FormSection title="About me">
           <textarea name="about" id="about" cols="30" rows="10"></textarea>
@@ -123,4 +123,4 @@ const Step2 = () => {
   );
 };
 
-export default Step2;
+export default Step3;
