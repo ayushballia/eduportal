@@ -19,7 +19,7 @@ const Step3 = () => {
   const router = useRouter();
 
   const handleNext = () => {
-    router.push("/step4");
+    alert("form submit")
   };
 
   return (
