@@ -49,6 +49,16 @@ export default function Links() {
             Job Description
           </Link>
         </li>
+        <li>
+          <Link
+            className={`link ${
+              pathname === "/updateProfile" ? "text-blue-500 font-semibold" : ""
+            }`}
+            href="/updateProfile"
+          >
+            Update Profile
+          </Link>
+        </li>
       </ul>
     </nav>
   );
