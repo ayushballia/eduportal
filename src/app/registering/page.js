@@ -107,26 +107,25 @@ const Page = () => {
                 type="select"
                 options={["Select...", "Salary 1", "Salary 2"]}
               />
-              
-                <div className="grid grid-cols-2 gap-3">
-                  <div>
-                    <label className="block text-[14px] font-semibold text-[#18191C]">
-                      Min Salary: (per month)
-                    </label>
-                    <select className="mt-1 block w-full rounded-[15px] border-[#E4E5E8] p-[17px] text-[14px] text-[#767F8C] font-normal">
-                      <option>Select...</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-[14px] font-semibold text-[#18191C]">
-                      Max salary:(per month)
-                    </label>
-                    <select className="mt-1 block w-full rounded-[15px] border-[#E4E5E8] p-[17px] text-[14px] text-[#767F8C] font-normal">
-                      <option>Select...</option>
-                    </select>
-                  </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-[14px] font-semibold text-[#18191C]">
+                    Min Salary: (per month)
+                  </label>
+                  <select className="mt-1 block w-full rounded-[15px] border-[#E4E5E8] p-[17px] text-[14px] text-[#767F8C] font-normal">
+                    <option>Select...</option>
+                  </select>
                 </div>
-              
+                <div>
+                  <label className="block text-[14px] font-semibold text-[#18191C]">
+                    Max salary:(per month)
+                  </label>
+                  <select className="mt-1 block w-full rounded-[15px] border-[#E4E5E8] p-[17px] text-[14px] text-[#767F8C] font-normal">
+                    <option>Select...</option>
+                  </select>
+                </div>
+              </div>
             </div>
             <p className="text-[18px] text-[#18191C] font-semibold my-4">
               Other Benefits
@@ -136,7 +135,9 @@ const Page = () => {
               Is there any joining fee required from the candidate?
             </p>
             <div className="w-2/4">
-              <FormInput label="Year of Establishment" />
+              <label className="block text-[18px] font-semibold text-[#18191C]">
+                Year of Establishment
+              </label>
               <div className="relative">
                 <Image
                   src={BlankCalenderIcon}
@@ -146,6 +147,10 @@ const Page = () => {
                   className="absolute right-3 top-5"
                 />
               </div>
+              <input
+                type="text"
+                className="mt-1 block w-full rounded-[15px] border-[#E4E5E8] p-[17px] text-[14px] text-[#767F8C] font-normal"
+              />
             </div>
             <button className="bg-[#0A65CC] text-white text-[16px] font-bold px-[32px] py-[16px] rounded-[20px] my-4">
               Save & Next
