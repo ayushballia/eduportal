@@ -39,6 +39,16 @@ export default function Links() {
             Registering
           </Link>
         </li>
+        <li>
+          <Link
+            className={`link ${
+              pathname === "/jobDescription" ? "text-blue-500 font-semibold" : ""
+            }`}
+            href="/jobDescription"
+          >
+            Job Description
+          </Link>
+        </li>
       </ul>
     </nav>
   );

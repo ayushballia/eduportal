@@ -7,6 +7,7 @@ import AtIcon from "@/app/images/registering/form/At.svg";
 import BlankCalenderIcon from "@/app/images/registering/form/CalendarBlank.svg";
 import RegistrationBenefits from "@/app/components/registering/RegistrationBenifits";
 import FormInput from "@/app/components/registering/FormInput";
+import CustomSelect from "@/app/components/CustomSelect.jsx";
 import OtherBenefits from "@/app/components/registering/OtherBenefits";
 
 const Page = () => {
@@ -54,15 +55,21 @@ const Page = () => {
 
           <form className="px-4">
             <div className="grid grid-cols-2 gap-6">
-              <FormInput
-                label="Organization Type"
-                type="select"
-                options={["Select...", "Type 1", "Type 2"]}
+              <CustomSelect
+                label={"Organization Type"}
+                placeholder={"Job keyword, tags etc.."}
               />
-              <FormInput
-                label="Organization Name"
-                placeholder="Job keyword, tags etc..."
+
+              <CustomSelect
+                label={"Organization Name"}
+                placeholder={"Job keyword, tags etc..."}
               />
+
+              <CustomSelect
+                label={"Job Category"}
+                placeholder={"Job keyword, tags etc..."}
+              />
+              
               <FormInput
                 label="Job Category"
                 type="select"

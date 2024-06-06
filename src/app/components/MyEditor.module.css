@@ -1,0 +1,14 @@
+
+.quill {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ql-toolbar {
+    order: 2; /* Places the toolbar after the editor */
+  }
+  
+  .ql-container {
+    order: 1; /* Ensures the editor comes before the toolbar */
+  }
+  
