@@ -13,13 +13,13 @@ const OptionButtons = ({ options, onSelect }) => {
   };
 
   return (
-    <div className="flex space-x-6">
+    <div className="flex items-center space-x-6">
       {options.map((option) => (
         <button
           key={option}
           type="button"
-          className={`flex px-[27px] py-[10px] border border-gray-300 rounded-[15px] text-[20px] ${
-            selectedOption === option ? "bg-blue-500 font-semibold text-white" : "bg-white text-black"
+          className={`flex px-[27px] py-[10px] border border-gray-300 rounded-[15px] text-[20px] capitalize ${
+            selectedOption === option ? "bg-[#0A65CC] font-semibold text-white" : "bg-white text-black"
           }`}
           onClick={() => handleSelect(option)} 
         >

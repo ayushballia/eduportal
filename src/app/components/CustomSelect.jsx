@@ -35,13 +35,13 @@ const CustomSelect = ({ label, placeholder }) => {
         <div>
           {/* Label  */}
           <div>
-            <p className="text-[20px] font-bold text-[#232323]">
+            <p className="text-[18px] font-semibold text-[#232323]">
               {label ? label : "\u00A0".repeat(5)}
             </p>
           </div>
         </div>
-        <div className="border-[1px] rounded-[15px] border-gray-300  pt-2 pb-3 relative max-w-[482px] my-4">
-          <div className="flex gap-2 flex-wrap px-4">
+        <div className="border-[1px] rounded-[15px] border-gray-300  pt-2 pb-3 relative my-4">
+          <div className="flex gap-2  px-4">
             {/* Selected Items */}
             {selectedItems.map((item, i) => (
               <div

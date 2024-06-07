@@ -3,7 +3,7 @@ import Image from "next/image";
 import CloseIcon from "@/app/images/registering/form/close_small.svg";
 
 const OtherBenefit = ({ text }) => (
-  <p className="flex justify-evenly items-center gap-2 text-[16px] font-bold bg-white px-[16px] py-[20px] rounded-[10px]">
+  <p className="flex justify-evenly items-center gap-2 text-[16px] font-bold bg-white px-[16px] py-[18px] border border-[#00000033] rounded-[10px]">
     {text}
     <span>
       <Image src={CloseIcon} width={9} height={9} alt="close icon" />

@@ -52,9 +52,9 @@ export default function Links() {
         <li>
           <Link
             className={`link ${
-              pathname === "/updateProfile" ? "text-blue-500 font-semibold" : ""
+              pathname === "/profile-update/jobDetail" ? "text-blue-500 font-semibold" : ""
             }`}
-            href="/updateProfile"
+            href="/profile-update/jobDetail"
           >
             Update Profile
           </Link>
