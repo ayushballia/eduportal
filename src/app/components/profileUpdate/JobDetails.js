@@ -57,7 +57,7 @@ const JobDetail = () => {
         Job Category
       </label>
       <div className="flex gap-4 my-4">
-        <button className="flex items-center gap-2 bg-[#0A65CC] text-white px-[23px]  text-[14px] font-semibold rounded-[15px]">
+        <button className="flex items-center gap-2 bg-[#0A65CC] text-white px-[23px]  text-[18px] font-semibold rounded-[15px]">
           Teaching
           <Image
             src={TeachingIcon}
@@ -66,7 +66,7 @@ const JobDetail = () => {
             alt="teaching icon"
           />
         </button>
-        <button className="flex items-center gap-2  px-[23px] text-[14px] border rounded-[15px]">
+        <button className="flex items-center gap-2  px-[23px] text-[18px] border rounded-[15px]">
           Non Teaching
           <Image
             src={NonTeachingIcon}

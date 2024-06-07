@@ -45,7 +45,7 @@ const CustomSelect = ({ label, placeholder }) => {
             {/* Selected Items */}
             {selectedItems.map((item, i) => (
               <div
-                className="border-[1px] rounded-[15px] border-gray-300 px-3 py-[6px] w-max cursor-pointer text-xs md:text-sm font-semibold text-white bg-blue-500"
+                className="flex border-[1px] rounded-[15px] border-gray-300 px-3 py-[6px] w-max cursor-pointer text-xs md:text-sm font-semibold text-white bg-blue-500"
                 key={i}
               >
                 {item}{" "}

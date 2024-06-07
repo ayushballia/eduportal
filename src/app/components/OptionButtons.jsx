@@ -18,7 +18,7 @@ const OptionButtons = ({ options, onSelect }) => {
         <button
           key={option}
           type="button"
-          className={`flex px-[27px] py-[10px] border border-gray-300 rounded-[15px] text-[20px] capitalize ${
+          className={`flex px-[27px] py-[10px] border border-gray-300 rounded-[15px] text-[18px] capitalize ${
             selectedOption === option ? "bg-[#0A65CC] font-semibold text-white" : "bg-white text-black"
           }`}
           onClick={() => handleSelect(option)} 

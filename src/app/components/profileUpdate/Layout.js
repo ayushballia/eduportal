@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
   return (
     <div className="flex gap-6 justify-evenly">
       {/* Sidebar */}
-      <nav className="w-1/4 p-[30px] bg-white border rounded-[20px] h-max">
+      <nav className="w-1/4 p-[30px] bg-white border rounded-[20px] h-max max-w-[285px]">
         <p className="text-[20px] font-bold text-[#232323] mb-5">
           Job Posting Steps
         </p>
@@ -68,10 +68,10 @@ const Layout = ({ children }) => {
             <div key={step.path} className="flex-1 text-center">
               <Link
                 href={index < getStepIndex(path) ? step.path : path}
-                className={`flex items-center justify-center gap-2 p-2 ${
+                className={`flex items-center justify-center gap-2 p-2  ${
                   path === step.path
                     ? "border-b-2 font-bold border-[#0A65CC] text-[#0A65CC]"
-                    : ""
+                    : "text-[#ADB2BA]"
                 }`}
               >
                 <Image src={step.icon} width={24} height={24} alt={step.name} />{" "}
