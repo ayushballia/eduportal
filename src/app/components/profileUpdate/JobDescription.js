@@ -5,8 +5,10 @@ import { useRouter } from "next/navigation";
 import MyEditor from "./MyEditor";
 import Dropdown from "@/app/components/profileUpdate/DropDown";
 import CustomSelect from "../CustomSelect";
-import OptionButtons from "../OptionButtons";
-import GenderSelector from "./GenderSelector"
+import FormSection from "../FormSection";
+import OptionButtonsWithIcons from "./OptionButtonsWithIcons";
+import MaleIcon from "../../images/profileUpdate/Group 14 Copy 2.svg";
+import FemaleIcon from "../../images/profileUpdate/Group 9 Copy 3.svg";
 
 const qualifications = [
   { value: "highschool", label: "High School" },
@@ -24,9 +26,13 @@ const courses = [
 // const roleOptions = ["Age", "gender", "Reginal language", "Assets"];
 
 const JobDescription = () => {
+  const [roleType, setRoleType] = useState(null);
 
-
-  // const [selectedOption, setSelectedOption] = useState(roleOptions[0]);
+  const gender = [
+    { label: "Male", icon: MaleIcon },
+    { label: "Female", icon: FemaleIcon },
+    { label: "Any" },
+  ];
   const router = useRouter();
   const [formData, setFormData] = useState({
     preferredGender: "",
@@ -40,11 +46,9 @@ const JobDescription = () => {
     router.push("/profile-update/jobSpecification");
   };
 
-
-  // const handleSelect = (option) => {
-  //   setSelectedOption(option);
-  //   console.log("Selected Option:", option);
-  // };
+  const handleSelect = (selectedOption) => {
+    console.log("Selected option:", selectedOption);
+  };
 
   return (
     <form onSubmit={handleSubmit} className="p-4">
@@ -117,28 +121,56 @@ const JobDescription = () => {
         Fill these details so that we can sort the best candidate for you
       </p>
 
-      {/* <OptionButtons options={roleOptions}
-          onSelect={handleSelect}/> */}
+      <FormSection title={"Preferred Gender"}>
+        <OptionButtonsWithIcons options={gender} onSelect={handleSelect} />
+      </FormSection>
 
-      {/* <div className="flex justify-between my-8">
-        <button className="px-[38px] py-[22px] text-[16px] font-bold bg-[#2677D2] rounded-[20px] text-white">
-          Age
-        </button>
-        <button className="px-[38px] py-[22px] text-[16px] font-bold  rounded-[20px] ">
-          Gender
-        </button>
-        <button className="px-[38px] py-[22px] text-[16px] font-bold  rounded-[20px] ">
-          Regional Language
-        </button>
-        <button className="px-[38px] py-[22px] text-[16px] font-bold  rounded-[20px] ">
-          Assets{" "}
-        </button>
-      </div> */}
+      <FormSection title="Age (in years)">
+        <div className="flex items-center gap-4 w-full">
+          <input
+            type="text"
+            name="min-age"
+            id="min-age"
+            placeholder="Min age"
+            className="text-[14px] text-[#9199A3] font-normal w-full border rounded-[15px] p-[17px]"
+          />
+          <p className="bg-[#0A65CC] text-[16px] text-white font-bold  rounded-[8px] px-[18px] py-[18px]">
+            To
+          </p>
+          <input
+            type="text"
+            name="max-age"
+            id="max-age"
+            placeholder="Max age"
+            className="text-[14px] text-[#9199A3] font-normal w-full border rounded-[15px] p-[17px]"
+          />
+        </div>
+      </FormSection>
 
-      <GenderSelector/>
+      <FormSection title={"Languages"}>
+        <input
+          type="text"
+          name="languages"
+          id="languages"
+          placeholder="Enter preferred languages"
+          className="text-[14px] text-[#9199A3] font-normal w-full border rounded-[15px] p-[17px]"
+        />
+      </FormSection>
 
-      <button type="submit" className="bg-blue-500 text-white p-2 rounded">
-        Next
+      <FormSection title={"Preferred Skills"}>
+        <input
+          type="text"
+          name="languages"
+          id="languages"
+          placeholder="Enter preferred languages"
+          className="text-[14px] text-[#9199A3] font-normal w-full border rounded-[15px] p-[17px]"
+        />
+      </FormSection>
+      <button
+        type="submit"
+        className="bg-[#0A65CC] text-white text-[16px] font-bold px-[32px] py-[16px] rounded-[20px]"
+      >
+        Save & Next
       </button>
     </form>
   );

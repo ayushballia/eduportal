@@ -13,6 +13,12 @@ import OptionButtons from "../OptionButtons";
 import OtherBenefits from "../registering/OtherBenefits";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import OptionButtonsWithIcons from "./OptionButtonsWithIcons";
+
+const jobCategory = [
+  { label: "Teaching", icon: TeachingIcon },
+  { label: "Non-Teaching", icon: NonTeachingIcon },
+];
 
 const JobDetail = () => {
   const roleOptions = ["full-time", "part-time", "contract", "visiting"];
@@ -53,29 +59,9 @@ const JobDetail = () => {
 
   return (
     <form onSubmit={handleSubmit} className="p-4">
-      <label for="job-category" className="font-semibold text-[18px]">
-        Job Category
-      </label>
-      <div className="flex gap-4 my-4">
-        <button className="flex items-center gap-2 bg-[#0A65CC] text-white px-[23px]  text-[18px] font-semibold rounded-[15px]">
-          Teaching
-          <Image
-            src={TeachingIcon}
-            width={55}
-            height={55}
-            alt="teaching icon"
-          />
-        </button>
-        <button className="flex items-center gap-2  px-[23px] text-[18px] border rounded-[15px]">
-          Non Teaching
-          <Image
-            src={NonTeachingIcon}
-            width={55}
-            height={55}
-            alt="teaching icon"
-          />
-        </button>
-      </div>
+      <FormSection title={"Job Category"}>
+        <OptionButtonsWithIcons options={jobCategory} onSelect={handleSelect} />
+      </FormSection>
 
       <CustomSelect label={"Role"} placeholder={"Select"} />
 
