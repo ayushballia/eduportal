@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import MyEditor from "./MyEditor";
-import Dropdown from "@/app/components/profileUpdate/DropDown";
+import Dropdown from "./Dropdown";
 import CustomSelect from "../CustomSelect";
 import FormSection from "../FormSection";
 import OptionButtonsWithIcons from "./OptionButtonsWithIcons";
@@ -134,7 +134,7 @@ const JobDescription = () => {
             placeholder="Min age"
             className="text-[14px] text-[#9199A3] font-normal w-full border rounded-[15px] p-[17px]"
           />
-          <p className="bg-[#0A65CC] text-[16px] text-white font-bold  rounded-[8px] px-[18px] py-[18px]">
+          <p className="bg-[#0A65CC] text-[16px] text-white font-bold  rounded-[8px] px-[18px] py-[16px]">
             To
           </p>
           <input
