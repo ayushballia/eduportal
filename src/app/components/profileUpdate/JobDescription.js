@@ -9,6 +9,7 @@ import FormSection from "../FormSection";
 import OptionButtonsWithIcons from "./OptionButtonsWithIcons";
 import MaleIcon from "../../images/profileUpdate/Group 14 Copy 2.svg";
 import FemaleIcon from "../../images/profileUpdate/Group 9 Copy 3.svg";
+import OtherBenefits from "./OtherBenefits";
 
 const qualifications = [
   { value: "highschool", label: "High School" },
@@ -157,6 +158,11 @@ const JobDescription = () => {
         />
       </FormSection>
 
+      <p className="text-[18px] text-[#232323] font-normal opacity-75 my-4">
+        Suggestions
+      </p>
+      <OtherBenefits />
+
       <FormSection title={"Preferred Skills"}>
         <input
           type="text"
@@ -166,9 +172,32 @@ const JobDescription = () => {
           className="text-[14px] text-[#9199A3] font-normal w-full border rounded-[15px] p-[17px]"
         />
       </FormSection>
+
+      <p className="text-[18px] text-[#232323] font-normal opacity-75 my-4">
+        Suggestions
+      </p>
+      <OtherBenefits />
+
+
+      <FormSection title={"Preferred Assets"}>
+        <input
+          type="text"
+          name="languages"
+          id="languages"
+          placeholder="Enter preferred Assets"
+          className="text-[14px] text-[#9199A3] font-normal w-full border rounded-[15px] p-[17px]"
+        />
+      </FormSection>
+
+
+      <p className="text-[18px] text-[#232323] font-normal opacity-75 my-4">
+        Suggestions
+      </p>
+      <OtherBenefits />
+
       <button
         type="submit"
-        className="bg-[#0A65CC] text-white text-[16px] font-bold px-[32px] py-[16px] rounded-[20px]"
+        className="bg-[#0A65CC] text-white text-[16px] font-bold px-[32px] py-[16px] rounded-[20px] mt-6"
       >
         Save & Next
       </button>
