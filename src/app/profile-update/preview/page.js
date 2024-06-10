@@ -1,10 +1,10 @@
 import Layout from "@/app/components/profileUpdate/Layout";
-import JobSpecification from "@/app/components/profileUpdate/JobSpecifications";
+import Preview from "@/app/components/profileUpdate/Preview";
 
 const page = () => {
   return (
     <Layout>
-      <JobSpecification />
+      <Preview />
     </Layout>
   );
 };

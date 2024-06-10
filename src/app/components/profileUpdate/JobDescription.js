@@ -44,11 +44,15 @@ const JobDescription = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    router.push("/profile-update/jobSpecification");
+    router.push("/profile-update/interviewProcess");
   };
 
   const handleSelect = (selectedOption) => {
     console.log("Selected option:", selectedOption);
+  };
+
+  const handleBack = () => {
+    router.back();
   };
 
   return (
@@ -194,6 +198,15 @@ const JobDescription = () => {
         Suggestions
       </p>
       <OtherBenefits />
+
+
+      <button
+          type="button"
+          onClick={handleBack}
+          className="bg-gray-500 text-white py-2 px-4 rounded"
+        >
+          Back
+        </button>
 
       <button
         type="submit"

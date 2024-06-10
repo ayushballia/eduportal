@@ -21,13 +21,15 @@ const Layout = ({ children }) => {
     },
     {
       name: "Interview Process",
-      path: "/profile-update/jobSpecification",
+      path: "/profile-update/interviewProcess",
       icon: adsClickIcon,
     },
-    { name: "Preview", path: "/profile-update/preference", icon: AtIcon },
+    { name: "Preview", path: "/profile-update/preview", icon: AtIcon },
   ];
 
   const getStepIndex = (path) => steps.findIndex((step) => step.path === path);
+
+  const currentStepIndex = getStepIndex(path);
 
   return (
     <div className="flex gap-6 justify-evenly">
@@ -40,9 +42,9 @@ const Layout = ({ children }) => {
           {steps.map((step, index) => (
             <li key={step.path}>
               <Link
-                href={index < getStepIndex(path) ? step.path : path}
+                href={index <= currentStepIndex ? step.path : path}
                 className={`flex gap-4 ${
-                  path === step.path ? "font-bold" : ""
+                  index <= currentStepIndex ? "font-bold" : ""
                 }`}
               >
                 <div className="flex items-center justify-center bg-[#0043CE] p-1 rounded-full">
@@ -67,9 +69,9 @@ const Layout = ({ children }) => {
           {steps.map((step, index) => (
             <div key={step.path} className="flex-1 text-center">
               <Link
-                href={index < getStepIndex(path) ? step.path : path}
+                href={index <= currentStepIndex ? step.path : path}
                 className={`flex items-center justify-center gap-2 p-2  ${
-                  path === step.path
+                  index <= currentStepIndex
                     ? "border-b-2 font-bold border-[#0A65CC] text-[#0A65CC]"
                     : "text-[#ADB2BA]"
                 }`}

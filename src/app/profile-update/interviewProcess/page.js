@@ -1,10 +1,10 @@
 import Layout from "@/app/components/profileUpdate/Layout";
-import Preference from "@/app/components/profileUpdate/Preference";
+import InterviewProcess from "../../components/profileUpdate/InterviewProcess";
 
 const page = () => {
   return (
     <Layout>
-      <Preference />
+      <InterviewProcess />
     </Layout>
   );
 };

@@ -221,6 +221,9 @@ const JobDetail = () => {
         />
       </FormSection>
 
+
+      
+
       <button
         type="submit"
         className="bg-[#0A65CC] text-white text-[16px] font-bold px-[32px] py-[16px] rounded-[20px]"
